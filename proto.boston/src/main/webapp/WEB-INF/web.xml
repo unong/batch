@@ -9,14 +9,14 @@
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
 		<init-param>
 			<param-name>contextConfigLocation</param-name>
-			<param-value>classpath:spring/daum-servlet-context.xml</param-value>
+			<param-value>classpath:daum-servlet-context.xml</param-value>
 		</init-param>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
 
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
-		<param-value>classpath:spring/root-context.xml</param-value>
+		<param-value>classpath:spring/*context.xml</param-value>
 	</context-param>
 
 	<listener>
@@ -34,7 +34,7 @@
 
 	<filter-mapping>
 		<filter-name>encodingFilter</filter-name>
-		<servlet-name>playsearch-testweb</servlet-name>
+		<servlet-name>daum-servlet</servlet-name>
 	</filter-mapping>
 
 	<servlet-mapping>

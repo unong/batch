@@ -20,6 +20,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<spring.version>3.0.5.RELEASE</spring.version>
 		<slf4j.version>1.6.1</slf4j.version>
+		<spring.batch.version>2.1.9.RELEASE</spring.batch.version>
 	</properties>
 	
 	<dependencies>
@@ -80,6 +81,11 @@
 			<artifactId>spring-context</artifactId>
 			<version>${spring.version}</version>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.batch</groupId>
+			<artifactId>spring-batch-core</artifactId>
+			<version>${spring.batch.version}</version>
+		</dependency>
 
 		<!-- Logging -->
 		<dependency>
@@ -129,6 +135,12 @@
 			</exclusions>
 			<scope>runtime</scope>
 		</dependency>
+		
+		<dependency>
+			<groupId>com.oracle</groupId>
+			<artifactId>ojdbc14</artifactId>
+			<version>10.2.0.4.0</version>
+		</dependency>
 
 		<!-- Testing -->
 		<dependency>
@@ -141,6 +153,12 @@
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-test</artifactId>
 			<version>${spring.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.batch</groupId>
+			<artifactId>spring-batch-test</artifactId>
+			<version>${spring.batch.version}</version>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
