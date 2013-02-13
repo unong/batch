@@ -14,9 +14,10 @@
            				http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
            				http://www.springframework.org/schema/batch
            				http://www.springframework.org/schema/batch/spring-batch-2.1.xsd">
-
-	<import resource="data-source-context.xml" />
-
+	
+	<context:component-scan base-package="com.unong.proto.boston" />
+	<import resource="classpath:/spring/data-source-context.xml"/>
+	
 	<bean id="jobLauncher"
 		class="org.springframework.batch.core.launch.support.SimpleJobLauncher">
 		<property name="jobRepository" ref="jobRepository" />
@@ -26,15 +27,14 @@
 		<property name="jobRegistry" ref="jobRegistry"/>
 	</bean>
 
-<!-- 
 	<bean id="jobRepository"
 		class="org.springframework.batch.core.repository.support.JobRepositoryFactoryBean"
 		p:dataSource-ref="dataSource" p:transactionManager-ref="transactionManager" p:lobHandler-ref="lobHandler"/>
- -->
+<!-- 
 	<bean id="jobRepository"
 		class="org.springframework.batch.core.repository.support.MapJobRepositoryFactoryBean"
 		lazy-init="true" autowire-candidate="true" />
-
+-->
 	<bean id="jobOperator"
 		class="org.springframework.batch.core.launch.support.SimpleJobOperator"
 		p:jobLauncher-ref="jobLauncher" p:jobExplorer-ref="jobExplorer"

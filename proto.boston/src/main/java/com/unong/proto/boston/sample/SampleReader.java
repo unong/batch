@@ -23,6 +23,11 @@ public class SampleReader implements ItemReader<Integer>{
 		
 		// maybe read some from a file or files
 		// then return some to object
+		
+		if(calledCnt > 40) {
+			return null;
+		}
+		
 		return calledCnt;
 	}
 }

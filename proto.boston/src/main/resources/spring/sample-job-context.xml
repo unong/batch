@@ -9,11 +9,17 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
 		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd">
 
-	<bean id="sampleReader" class="com.unong.proto.boston.sample.SampleReader"/>
-	<bean id="sampleWriter" class="com.unong.proto.boston.sample.SampleWriter"/>
+	<batch:step id="commonListener" abstract="true">
+		<batch:tasklet>
+			<batch:listeners>
+ 				<batch:listener ref="common1Listener"/>
+ 				<batch:listener ref="common2Listener"/>
+			</batch:listeners>
+		</batch:tasklet>
+	</batch:step>
 
 	<batch:job id="test1job">
-		<batch:step id="test1step">
+		<batch:step id="test1step" parent="commonListener">
 			<batch:tasklet>
 				<batch:chunk reader="sampleReader" writer="sampleWriter" commit-interval="3"/>
 			</batch:tasklet>

@@ -15,7 +15,7 @@ import org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAda
 import static org.springframework.test.web.ModelAndViewAssert.*;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration("classpath:spring/daum-servlet-context.xml")
+@ContextConfiguration(locations = { "/daum-servlet-context.xml", "/spring/root-context.xml", "/spring/sample-job-context.xml"})
 public class DaumControllerTest {
 
 	private MockHttpServletRequest request;

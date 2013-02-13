@@ -15,7 +15,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = { "/spring/root-context.xml", "/spring/sample-job-context.xml",
+@ContextConfiguration(locations = { "/daum-servlet-context.xml", "/spring/root-context.xml", "/spring/sample-job-context.xml",
 		"/job-runner-context.xml" })
 public class SampleJobTest {
 	private static final Logger log = LoggerFactory.getLogger(SampleJobTest.class);
