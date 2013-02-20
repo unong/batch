@@ -1,14 +1,10 @@
 package com.unong.proto.boston.sample;
 
-import static org.junit.Assert.*;
-
 import java.io.IOException;
 import java.util.List;
 
 import org.apache.zookeeper.KeeperException;
 import org.junit.Test;
-
-import com.unong.proto.boston.sample.ConnectionWatcher;
 
 public class ZooKeeperClientTest {
 
