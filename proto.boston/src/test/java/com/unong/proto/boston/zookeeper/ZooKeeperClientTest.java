@@ -8,7 +8,7 @@ import java.util.List;
 import org.apache.zookeeper.KeeperException;
 import org.junit.Test;
 
-import com.unong.proto.boston.common.zookeeper.ConnectionWatcher;
+import com.unong.proto.boston.sample.ConnectionWatcher;
 
 public class ZooKeeperClientTest {
 

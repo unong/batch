@@ -1,4 +1,4 @@
-package com.unong.proto.boston.common.zookeeper;
+package com.unong.proto.boston.sample;
 
 import java.io.IOException;
 import java.util.concurrent.CountDownLatch;

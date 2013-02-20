@@ -1,4 +1,4 @@
-package com.unong.proto.boston;
+package com.unong.proto.boston.sample;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -11,6 +11,8 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.web.servlet.HandlerAdapter;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter;
+
+import com.unong.proto.boston.sample.DaumController;
 
 import static org.springframework.test.web.ModelAndViewAssert.*;
 

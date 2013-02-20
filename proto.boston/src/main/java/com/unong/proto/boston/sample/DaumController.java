@@ -1,4 +1,4 @@
-package com.unong.proto.boston;
+package com.unong.proto.boston.sample;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

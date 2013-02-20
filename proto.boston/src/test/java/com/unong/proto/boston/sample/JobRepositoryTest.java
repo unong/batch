@@ -1,4 +1,4 @@
-package com.unong.proto.boston.repository;
+package com.unong.proto.boston.sample;
 
 import java.util.HashMap;
 import java.util.List;
