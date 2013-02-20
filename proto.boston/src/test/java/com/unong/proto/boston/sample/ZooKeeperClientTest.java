@@ -1,4 +1,4 @@
-package com.unong.proto.boston.zookeeper;
+package com.unong.proto.boston.sample;
 
 import static org.junit.Assert.*;
 
