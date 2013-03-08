@@ -17,7 +17,6 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class DaumController {
-
 	private static final Logger logger = LoggerFactory.getLogger(DaumController.class);
 
 	@Autowired

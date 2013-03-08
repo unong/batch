@@ -17,7 +17,7 @@ import com.unong.proto.boston.sample.DaumController;
 import static org.springframework.test.web.ModelAndViewAssert.*;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = { "/daum-servlet-context.xml", "/spring/root-context.xml", "/spring/sample-job-context.xml"})
+@ContextConfiguration(locations = { "/spring/data-source-context.xml", "/daum-servlet-context.xml", "/spring/root-context.xml", "/spring/sample-job-context.xml"})
 public class DaumControllerTest {
 
 	private MockHttpServletRequest request;
@@ -36,7 +36,6 @@ public class DaumControllerTest {
 
 	@Test
 	public void startTest() throws Exception {
-
 		request.setRequestURI("/");
 		request.setMethod("GET");
 
